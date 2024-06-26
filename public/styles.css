@@ -1,0 +1,97 @@
+
+body{
+  display: flex;  
+  background-color: darkblue;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.Board {
+    display: grid;
+    justify-content: center;
+    border: 3px solid darkgrey;
+    gap: 1px; /* Espacio entre las celdas */
+  }
+  
+.row {
+    display: flex;
+  }
+
+  .cell {
+    width: 30px; /* Ancho fijo para crear un cuadrado */
+    height: 30px; /* Altura fija para crear un cuadrado */
+    justify-content: center;
+    align-items: center;
+    background-color: white; /* Color de fondo predeterminado */
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse sobre la celda */
+    border: white 5px outset;
+  }
+
+  .cell-flag{
+    width: 30px; /* Ancho fijo para crear un cuadrado */
+    height: 30px; /* Altura fija para crear un cuadrado */
+    border: 5px solid #ccc; /* Bordes de la celda */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    background-image: url('/flag.png');
+    background-size: cover;
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse sobre la celda */
+    border: white 5px outset;
+  }
+  
+
+  .cell-empty {
+    width: 30px; /* Ancho fijo para crear un cuadrado */
+    height: 30px; /* Altura fija para crear un cuadrado */
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray; /* Color de fondo predeterminado */
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse sobre la celda */
+    border: 5px solid #ccc;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 150%;
+    color: darkorange;
+  }
+
+  .message{
+      font-size: 5vw;
+      color: white;
+  }
+
+  .endConteiner{
+      display: flex;
+      flex-direction: column;
+      animation: showUpAnimation 0.7s ease-in-out;
+  }
+
+  @keyframes showUpAnimation {
+    0% {
+      opacity: 0;
+    }
+    50%{
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .play{
+    background-color: black;
+    margin: 1vw;
+    height: 5vw;
+    color: white;
+    font-size: 2vw;
+  }
+
+  .play:hover{
+    background-color: white;
+    margin: 1vw;
+    height: 5vw;
+    color: black;
+    font-size: 2vw;
+    border: 5px solid black;
+  }

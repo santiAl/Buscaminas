@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Board</title>
+        <link rel="stylesheet" type="text/css" href="./styles.css">
+        <script src="/scripts.js"></script>
+    </head>
+    <body id="body">
+            <div class="Board">
+                <% board.forEach((row,x) => { %>
+                    <div class="row">
+                        <% row.forEach((cell,y) => { %>
+                            <% let visibilityClass = cell.visibility === true ? 'cell-empty' : cell.isFlag === true ? 'cell-flag' :'cell'; %>
+                            <% let valueEmpty = cell.visibility === true && cell.value !== 0 ? cell.value : null ; %>
+                            <div class="<%= visibilityClass %>" id="cell_<%= x %>_<%= y %>" data-x="<%= x%>" data-y="<%= y%>" data-id="<%= id%>" > <%= valueEmpty %> </div>
+                        <% }); %>
+                        </div>
+                <% }); %>
+                </div>
+    </body>
+</html>

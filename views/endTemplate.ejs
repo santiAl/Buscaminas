@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>End</title>
+        <link rel="stylesheet" type="text/css" href="./styles.css">
+    </head>
+    <body id="body">
+        <div class="endConteiner">
+            <% if (status === 'win') { %>
+                <div class="message">Ganaste Felicitaciones !!! Gracias por jugar</div>
+            <% } else { %>
+                <div class="message">Perdiste, vuelve a intentarlo</div>
+            <% } %>
+            <button class="play" id="play-button"> Jugar de vuelta </button>
+        </div>
+    </body>
+</html>
